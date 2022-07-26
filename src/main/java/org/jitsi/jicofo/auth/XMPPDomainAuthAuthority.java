@@ -62,7 +62,7 @@ public class XMPPDomainAuthAuthority
 
     private boolean verifyJid(Jid fullJid)
     {
-        return fullJid.asDomainBareJid().equals(domain);
+        return fullJid.asDomainBareJid().equals(domain) || fullJid.asDomainBareJid().equals("jwt." + domain);
     }
 
     @Override
